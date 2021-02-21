@@ -29,13 +29,6 @@ def start():
         postProcessedImage = postProcessImage(meanImage)
         cvWriteImage(postProcessedImage,"Masked.jpg",outputPath)
 
-# def batchedPostProcess(firstImage,images):
-#
-#     imageAcc=np.zeros(cvConvertToGrayscale(firstImage).shape)
-#     imgs=list(images)
-#     for image in imgs:
-#         imageAcc = imageAcc + image
-
 
 def isBright(image, threshold):
     x,Y,V=cv.split(cv.cvtColor(image, cv.COLOR_BGR2HSV))
